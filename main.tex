@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{float} 
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{url} 
+\usepackage{braket}
+
+\usepackage{subfiles}
+
+\newgeometry{vmargin={25mm}, hmargin={18mm,18mm}}
+
+\title{Study and Analysis of QAOA}
+\author{June Vanlerberghe}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+This paper introduces the Quantum Approximate Optimization Algorithm, a promising algorithm for solving combinatorial optimization problems using hybrid quantum-classical techniques. QAOA uses the technique of variational quantum algorithms, where the problem is encoded into a Hamiltonian used in the quantum circuit, and the optimization is performed by adjusting the parameters classically. This algorithm has shown potential for finding approximate solutions to QUBO problems, including MaxCut. This paper explores the theoretical, simulated, and experimental performance of QAOA and compares it with existing classical approaches. 
+\end{abstract}
+
+\begin{multicols*}{2}
+\subfile{sections/introduction}
+\subfile{sections/background}
+\subfile{sections/qaoa}
+\subfile{sections/analysis}
+\subfile{sections/conclusion}
+
+\end{multicols*}
+
+\bibliography{sections/reference}
+\bibliographystyle{plain}
+\end{document}
+
